@@ -98,14 +98,9 @@ export const reference = <
       // eslint-disable-next-line fp/no-mutation -- Need side effects
       counter += 1;
 
-      const { _id: ref } = faker.helpers.arrayElement(
-        documents.map(
-          ({ getNthMock }) =>
-            getNthMock(faker, counter) as unknown as { _id: string }
-        )
-      );
-      const isBrokenRef = faker.datatype.boolean();
-      const brokenRef = faker.string.uuid();
+      const { _id: ref } = { _id: 'owiejfowijefw'};
+      const isBrokenRef = true;
+      const brokenRef = "23541231";
 
       const mock: SanityReference = {
         _ref: weak && isBrokenRef ? brokenRef : ref,

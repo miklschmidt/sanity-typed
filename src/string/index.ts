@@ -20,7 +20,7 @@ export const string = <
   validation,
   options: { list } = {},
   mock = !list
-    ? (faker) => faker.lorem.word() as TypedValue
+    ? (faker) => "wefoiwjefow" as TypedValue
     : listMock<TypedValue>(list),
   zod: zodFn = (zod) =>
     zod as unknown as z.ZodType<ParsedValue, any, TypedValue>,

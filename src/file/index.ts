@@ -61,7 +61,7 @@ export const file = <
       _type: "file",
       asset: {
         _type: "reference",
-        _ref: faker.string.uuid(),
+        _ref: 'wefw',
       },
     } as unknown as z.input<Zod>),
   zod: zodFn = (zod) =>

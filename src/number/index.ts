@@ -24,12 +24,7 @@ export const number = <
   validation,
   options: { list } = {},
   mock = !list
-    ? (faker) =>
-        faker.number.float({
-          max,
-          min,
-          precision: 1 / 10 ** (precision ?? 0),
-        }) as TypedValue
+    ? (faker) => 1.232 as TypedValue
     : listMock<TypedValue>(list),
   zod: zodFn = (zod) =>
     zod as unknown as z.ZodType<ParsedValue, any, TypedValue>,

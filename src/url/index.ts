@@ -7,7 +7,7 @@ import type { SanityTypeDef } from "../types";
 const zod = z.string().url();
 
 export const url = <ParsedValue = string, ResolvedValue = string>({
-  mock = (faker) => faker.internet.url(),
+  mock = (faker) => "https://www.google.com",
   zod: zodFn = (zod) => zod as unknown as z.ZodType<ParsedValue, any, string>,
   zodResolved,
   ...def

@@ -10,11 +10,7 @@ export const datetime = <ParsedValue = Date, ResolvedValue = Date>({
   min,
   validation,
   mock = (faker) =>
-    faker.date
-      .between({
-        from: min ?? "2021-06-03T03:24:55.395Z",
-        to: max ?? "2022-06-04T18:50:36.539Z",
-      })
+      new Date("2020-12-31T00:00:00.000Z")
       .toISOString(),
   zod: zodFn = (zod) =>
     zod

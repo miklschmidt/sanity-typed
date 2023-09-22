@@ -9,7 +9,7 @@ export const text = <ParsedValue = string, ResolvedValue = string>({
   length,
   max,
   min,
-  mock = (faker) => faker.lorem.paragraphs(),
+  mock = (faker) => "wegiowefiodjwoiefjio",
   regex,
   validation,
   zod: zodFn = (zod) => zod as unknown as z.ZodType<ParsedValue, any, string>,

@@ -5,7 +5,7 @@ import { createType } from "../types";
 import type { SanityTypeDef } from "../types";
 
 export const boolean = <ParsedValue = boolean, ResolvedValue = boolean>({
-  mock = (faker) => faker.datatype.boolean(),
+  mock = (faker) => true,
   zod: zodFn = (zod) => zod as unknown as z.ZodType<ParsedValue, any, boolean>,
   zodResolved,
   ...def

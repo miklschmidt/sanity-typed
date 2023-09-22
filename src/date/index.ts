@@ -6,11 +6,7 @@ import type { SanityTypeDef } from "../types";
 
 export const date = <ParsedValue = string, ResolvedValue = string>({
   mock = (faker) =>
-    faker.date
-      .between({
-        from: "1990-01-01T00:00:00.000Z",
-        to: "2020-12-31T00:00:00.000Z",
-      })
+    new Date("2020-12-31T00:00:00.000Z")
       .toLocaleDateString("fr-CA"),
   zod: zodFn = (zod) => zod as unknown as z.ZodType<ParsedValue, any, string>,
   zodResolved,

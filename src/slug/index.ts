@@ -12,7 +12,7 @@ const zod: z.ZodType<SlugValue, any, SlugValue> = z.object({
 export const slug = <ParsedValue = string, ResolvedValue = string>({
   mock = (faker) => ({
     _type: "slug",
-    current: faker.lorem.slug(),
+    current: "dadwf/fwefwe",
   }),
   zod: zodFn = (zod) =>
     zod.transform(({ current }) => current) as unknown as z.ZodType<

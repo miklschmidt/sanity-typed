@@ -1,4 +1,3 @@
-import type { Faker } from "@faker-js/faker";
 import { flow, isObject, map } from "lodash/fp";
 import type { Merge } from "type-fest";
 
@@ -27,8 +26,7 @@ export const listValueToValue = <T>(item: ListValue<T>) =>
 
 export const listMock =
   <Input>(list: TupleOfLength<ListValue<Input>, 1>) =>
-  (faker: Faker) =>
+  (faker: null) =>
     flow(
       map(listValueToValue),
-      faker.helpers.arrayElement.bind(faker.helpers)
     )(list);
